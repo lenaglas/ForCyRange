@@ -11,7 +11,6 @@ RUN apt-get install -y sudo \
     && git clone git://github.com/mininet/mininet \
     && /mininet/util/install.sh -a \
     && pip install cpppo==4.3.4 \
-    && pip install minicps \
-    && chmod +x ./start.sh
-CMD ["./start.sh"]
+    && pip install minicps 
+
 
