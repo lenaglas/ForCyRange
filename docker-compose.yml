@@ -6,12 +6,10 @@ services:
     container_name: iot-simulation
     privileged: true
     network_mode: "host"
-    command: tail -F /dev/null
-    #volumes:
-    #  - digital-twin-log:/src/logs
-    #  - ../../src:/src
+    volumes:
+      - ./src:/src
     #depends_on:
     #    - filebeat
+    command: tail -F /dev/null
 
-#volumes:
-#  iot-simulation-log:
+

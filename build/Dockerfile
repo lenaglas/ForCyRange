@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-#COPY ./start.sh ./start.sh
+COPY ./start.sh ./start.sh
 RUN apt-get update
 RUN apt-get install -y sudo \
     && apt-get install -y python3.8 \
@@ -10,7 +10,10 @@ RUN apt-get install -y sudo \
     && apt-get install -y screen \
     && git clone git://github.com/mininet/mininet \
     && /mininet/util/install.sh -a \
-    && pip install cpppo==4.3.4 \
-    && pip install minicps 
+    && git clone https://github.com/nowsecure/fsmon.git \
+    && /fsmon/make install 
+
+   
+CMD ["./start.sh"]
 
 
