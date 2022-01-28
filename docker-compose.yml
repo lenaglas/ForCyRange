@@ -10,6 +10,6 @@ services:
       - ./src:/src
     #depends_on:
     #    - filebeat
-    command: tail -F /dev/null
+    #command: tail -F /dev/null
 
 

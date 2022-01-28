@@ -55,8 +55,9 @@ if __name__ == '__main__':
     #CLI(net)
     s1, smartLock, iotHub = net.get('s1', 'smartLock', 'iotHub')
    
-    smartLock.cmd('screen -dmSL tank python3 smartDoor.py')
-    iotHub.cmd('screen -dmSL iot python3 malware.py')
+    smartLock.cmd('screen -dmS door python3 smartDoor.py')
+    iotHub.cmd('screen -dmS iot python3 malware.py')
+    iotHub.cmd('screen -dmS fsmonscreen -L -Logfile ./fsmon.log fsmon')
     CLI( net )
         
         
